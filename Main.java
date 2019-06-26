@@ -22,21 +22,19 @@ class Main
         message.printMessage("\n");
 
         // PASO 1
-        message.printMessage("Se borran los espacios en blanco dado que no aportan nada\n");
+        message.printMessage("Para dar mas enfoque a los símbolos, y suponinendo que no se podría formar palabras, se suprimen los espacios en blanco que se encuentran en medio de cada uno.\n");
         message.cleanMessage();
         message.printMessage(message.getFinalMessage());
         message.printMessage("\n");
 
         // PASO 2
-        message.printMessage("Se busca la frecuencia de aparición de cada letra en el mensaje:\n");
+        message.printMessage("Como paso siguiente se 'mide' la frecuencia de aparición de cada símbolo en el mensaje:\n");
         message.showOcurrences();
         message.printMessage("\n");
 
         // PASO 3
-        message.printMessage("Según el artículo");
-        message.printMessage("https://es.wikipedia.org/wiki/Frecuencia_de_aparici%C3%B3n_de_letras");
         message.printMessage("El separador o espacio es el signo más abundante, casi duplicando a la letra más frecuente.");
-        message.printMessage("Así que procedemos a reemplazar la letra con mas frecuencia de aparición con el espacio en blanco.");
+        message.printMessage("Por lo cual se procede a reemplazar la letra de mayor frecuencia de aparición por el espacio en blanco.");
         message.printMessage("\n");
         message.printMessage("Sabiendo esto, el texto quedaría de la siguiente forma:\n");
         String[][] spaceReplacement = {
@@ -54,8 +52,8 @@ class Main
         message.printMessage("El cual ya se lo ve con un poco más de sentido para el ojo humano.\n");
 
         // PASO 4
-        message.printMessage("Luego, por la información brindada en el artículo mencionado, se empieza a reemplazar las letras tomando en cuenta el orden de frecuencia de las letras en 'El Quijote' y 'La Regenta'.");
-        message.printMessage("Además de ir probando más reemplazos.\n");
+        message.printMessage("En el diccionario de la RAE la letra más frecuente es la A, pero en cualquier texto castellano, la frecuencia de las partículas 'que', 'el', 'se', 'me', etc. hace que la 'e' sea más frecuente.");
+        message.printMessage("Se prueban otros reemplazos.\n");
         String[][] replacements = {
             {"Δ", "a"},
             {"Σ", "e"},
@@ -98,6 +96,8 @@ class Main
         }
 
         message.printMessage("Saludos!\n");
-        message.printMessage("Autor: Daniel Echenique\n");
+        message.printMessage("Autor: Daniel Echenique\n\n");
+        message.printMessage("____________________________________________________________________");
+        message.printMessage("https://es.wikipedia.org/wiki/Frecuencia_de_aparici%C3%B3n_de_letras");
     }
 }
